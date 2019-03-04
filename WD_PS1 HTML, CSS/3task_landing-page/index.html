@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity=
+  "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+  crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header__logo">
+        <div>N</div>
+        <div class="header__logo-pluses">++</div>
+      </div>
+      <nav>
+        <a href="url">PRODUCTS</a>
+        <a href="url">ABOUT US</a>
+        <a href="url">CONTACT US</a>
+      </nav>
+    </header>
+
+    <section class="app">
+      <div class="app__smartphon">
+        <img src="iphone.png" alt="IPhone" width="165" height="350">
+      </div>
+      <div class="app__text">
+        <h2>Our awesome app is ready to use!</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+          lorem tempor tortor dignissim varius et vel risus. Duis vestibulum ex
+          diam, in molestie felis viverra eu. Phasellus vel semper ex. Morbi
+          pharetra congue scelerisque.
+        </p>
+        <button class="app__button">Buy now!</button>
+      </div>
+    </section>
+
+    <section class="propositions">
+      <div class="propositions__icon-and-text">
+        <div class="propositions__icon-background">
+          <i class="fas fa-code"></i>
+        </div>
+        <h4>Web development</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+          lorem tempor tortor dignissim varius etvel risus. Duis vestibulum ex
+          diam, in molestie felis viverra eu. Phasellus vel semper ex. Morbi
+          pharetra congue scelerisque.
+        </p>
+      </div>
+
+      <div class="propositions__icon-and-text">
+        <div class="propositions__icon-background">
+          <i class="fab fa-android"></i>
+        </div>
+        <h4>Mobile development</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+          lorem tempor tortor dignissim varius etvel risus. Duis vestibulum ex
+          diam, in molestie felis viverra eu. Phasellus vel semper ex. Morbi
+          pharetra congue scelerisque.
+        </p>
+      </div>
+
+      <div class="propositions__icon-and-text">
+        <div class="propositions__icon-background">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <h4>Highload</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
+          lorem tempor tortor dignissim varius etvel risus. Duis vestibulum ex
+          diam, in molestie felis viverra eu. Phasellus vel semper ex. Morbi
+          pharetra congue scelerisque.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <h3 class="footer__title">Contact us!</h3>
+      <form>
+        <label for="name">name:</label>
+        <input type="text" id="name">
+
+        <label for="password">password:</label>
+        <input type="password" id="password">
+
+        <input type="submit" value="submit" class="footer__submit">
+
+        <label for="email">email:</label>
+        <input type="email" id="email">
+
+        <label for="phone">telephone number:</label>
+        <input type="tel" id="phone">
+
+        <p><input type="radio" name="gender" value="male" checked> male</p>
+        <p><input type="radio" name="gender" value="female"> female</p>
+
+        <p>
+          <input type="checkbox" name="vehicle1" value="Bike"> have a bike
+        </p>
+        <p><input type="checkbox" name="vehicle2" value="Car"> have a car</p>
+
+        <input type="button" onclick="alert('Hello!')" value="Click Me!">
+
+        <label for="favcolor">favorite color:</label>
+        <input type="color" id="favcolor" value="#ff0000">
+
+        <label for="bday">birthday:</label>
+        <input type="date" id="bday">
+
+        <label for="bdaytime">birthday date and time:</label>
+        <input type="datetime-local" id="bdaytime">
+
+        <label for="bdaymonth">birthday month and year:</label>
+        <input type="month" id="bdaymonth">
+
+        <label for="quantity">number between 1 and 5:</label>
+        <input type="number" id="quantity" min="1" max="5">
+
+        <label for="points">range:</label>
+        <input type="range" id="points" min="0" max="10">
+
+        <label for="myFile">file:</label>
+        <input type="file" id="myFile">
+
+        <label for="googlesearch">search:</label>
+        <input type="search" id="googlesearch">
+
+        <label for="usr_time">time:</label>
+        <input type="time" id="usr_time">
+
+        <label for="homepage">homepage:</label>
+        <input type="url" id="homepage">
+
+        <label for="year_week">year week:</label>
+        <input type="week" id="year_week">
+
+        <input type="reset" value="reset" class="footer__submit">
+        
+        <label for="question">question:</label>
+        <textarea type="text" id="question"></textarea>
+      </form>
+      <button class="footer__button">Send email</button>
+    </footer>
+  </div>
+</body>
+</html>
