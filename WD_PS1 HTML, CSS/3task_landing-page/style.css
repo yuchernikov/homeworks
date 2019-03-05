@@ -27,7 +27,7 @@ header {
 .header__logo {
   display: flex;
   font-size: 55px;
-  font-weight: 550;
+  font-weight: bold;
 }
 
 .header__logo-pluses {
@@ -37,7 +37,6 @@ header {
 
 nav {
   justify-content: space-between;
-  /* min-width: 320px; */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -64,7 +63,6 @@ a {
 .app__smartphon {
   display: flex;
   margin: 0 auto;
-
 }
 
 .app__text {
@@ -86,7 +84,6 @@ a {
   align-items: center;
   background-color: #1abc9c;
   color: #fff;
-  border-color: white;
   border-radius: 4px;
   border: 2px solid white;
   text-align: center;
@@ -177,7 +174,6 @@ textarea {
   align-items: center;
   background-color: #1abc9c;
   color: #fff;
-  border-color: white;
   border-radius: 4px;
   border: 2px solid white;
   text-align: center;
