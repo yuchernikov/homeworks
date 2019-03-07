@@ -14,7 +14,8 @@ function countSum() {
       sum += i;
     }
   }
-  document.getElementById("resultSum").innerHTML = "The resuit is " + sum;
+  document.getElementById("resultSum").innerHTML =
+  "The resuit is: " + sum;
 }
 
 function countSeconds() {
@@ -32,6 +33,20 @@ function countSeconds() {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  document.getElementById("resultSeconds").innerHTML = "The resuit is " +
-  hours + ":" + minutes + ":" + seconds;
+  document.getElementById("resultSeconds").innerHTML =
+  "The resuit is: " + hours + ":" + minutes + ":" + seconds;
+}
+
+function countTime() {
+  let inputString = document.getElementById("time").value;
+  console.log(inputString);
+  let arrayOfStrings = inputString.split(":");
+  console.log(arrayOfStrings);
+  let hours = +arrayOfStrings[0];
+  console.log(hours);
+  let minutes = +arrayOfStrings[1];
+  let seconds = +arrayOfStrings[2];
+  document.getElementById("resultTime").innerHTML =
+  "The resuit is: " + (hours * 3600 + minutes * 60 + seconds);
+
 }
