@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WD_PS2 task1</title>
+  <title>WD_PS2 warm-up</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h2>WD_PS2 task1</h2>
+  <h2>WD_PS2 warm-up</h2>
   <p>
     This program counts the sum of the numbers in the interval
     between the entered by the user, adding only the numbers that
@@ -20,27 +20,19 @@
     <label for="secondNumber">Enter the second number:</label>
     <input type="number" id="secondNumber">
   </form>
-  <button type="button" name="button" onclick="count()">Count</button>
-  <p id="result"></p>
-  <script>
-    function count() {
-      let min = +document.getElementById("firstNumber").value;
-      let max = +document.getElementById("secondNumber").value;
-      if (min > max) {
-        let temp = max;
-        max = min;
-        min = temp;
-      }
-      let sum = 0;
-      for (var i = min + 1; i < max; i++) {
-        let str = String(i);
-        let lastChar = str.charAt(str.length - 1);
-        if (lastChar == 2 || lastChar == 3 || lastChar == 7) {
-          sum += i;
-        }
-      }
-      document.getElementById("result").innerHTML = "The resuit is " + sum;
-    }
-  </script>
+  <p id="resultSum"></p>
+  <button type="button" name="button" onclick="countSum()">Count</button>
+
+
+  <p>This program converts seconds in hh:mm:ss format.</p>
+  <form class="form" action="index.html" method="post">
+    <label for="seconds">Enter time in seconds:</label>
+    <input type="number" id="seconds">
+  </form>
+  <p id="resultSeconds"></p>
+  <button type="button" name="button" onclick="countSeconds()">Count</button>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
