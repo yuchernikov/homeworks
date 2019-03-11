@@ -16,34 +16,48 @@
       between the entered by the user, adding only the numbers that
       end with 2, 3 and 7.
     </h4>
-    <form class="form" action="index.html" method="post">
+    <form action="index.html">
       <label for="firstNumber">Enter the first number:</label>
       <input type="number" id="firstNumber">
       <label for="secondNumber">Enter the second number:</label>
       <input type="number" id="secondNumber">
     </form>
     <p id="resultSum">The resuit is:</p>
-    <button type="button" name="button" onclick="countSum()">Count</button>
+    <button type="button" onclick="countSum()">Count</button>
   </section>
 
   <section>
     <h4>This program converts seconds in hh:mm:ss format.</h4>
-    <form class="form" action="index.html" method="post">
+    <form action="index.html">
       <label for="seconds">Enter time in seconds:</label>
       <input type="number" id="seconds">
     </form>
     <p id="resultSeconds">The resuit is:</p>
-    <button type="button" name="button" onclick="countSeconds()">Count</button>
+    <button type="button" onclick="countSeconds()">Count</button>
   </section>
 
   <section>
     <h4>This program converts hh:mm:ss format in seconds.</h4>
-    <form class="form" action="index.html" method="post">
+    <form action="index.html">
       <label for="time">Enter time in hh:mm:ss format:</label>
       <input type="text" id="time">
     </form>
     <p id="resultTime">The resuit is:</p>
-    <button type="button" name="button" onclick="countTime()">Count</button>
+    <button type="button" onclick="countTime()">Count</button>
+  </section>
+
+  <section>
+    <h4>This program counts datetime difference.</h4>
+    <form action="index.html">
+      <label for="firstDatetime">
+        Enter the first date in format "October 13, 2014 11:13:00" :
+      </label>
+      <input type="datetime-local" id="firstDatetime">
+      <label for="secondDatetime">Enter the second date:</label>
+      <input type="datetime-local" id="secondDatetime">
+    </form>
+    <p id="resultDatetime">The resuit is:</p>
+    <button type="button" onclick="countDateTime()">Count</button>
   </section>
 
 </body>
