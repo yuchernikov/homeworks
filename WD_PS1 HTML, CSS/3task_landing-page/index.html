@@ -19,15 +19,15 @@
         <div class="header__logo-pluses">++</div>
       </div>
       <nav>
-        <a href="url">PRODUCTS</a>
-        <a href="url">ABOUT US</a>
-        <a href="url">CONTACT US</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#aboutUs">ABOUT US</a>
+        <a href="#contactUs">CONTACT US</a>
       </nav>
     </header>
 
-    <section class="app">
+    <section id="products" class="app">
       <div class="app__smartphon">
-        <img src="iphone.png" alt="IPhone" width="165" height="350">
+        <img src="iphone.png" alt="IPhone">
       </div>
       <div class="app__text">
         <h2>Our awesome app is ready to use!</h2>
@@ -41,7 +41,7 @@
       </div>
     </section>
 
-    <section class="propositions">
+    <section id="aboutUs"class="propositions">
       <div class="propositions__icon-and-text">
         <div class="propositions__icon-background">
           <i class="fas fa-code"></i>
@@ -82,7 +82,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer id="contactUs">
       <h3 class="footer__title">Contact us!</h3>
       <form>
         <label for="name">name:</label>
@@ -99,13 +99,11 @@
         <label for="phone">telephone number:</label>
         <input type="tel" id="phone">
 
-        <p><input type="radio" name="gender" value="male" checked> male</p>
-        <p><input type="radio" name="gender" value="female"> female</p>
+        <p><input type="radio" name="gender" checked> male</p>
+        <p><input type="radio" name="gender"> female</p>
 
-        <p>
-          <input type="checkbox" name="vehicle1" value="Bike"> have a bike
-        </p>
-        <p><input type="checkbox" name="vehicle2" value="Car"> have a car</p>
+        <p><input type="checkbox"> have a bike</p>
+        <p><input type="checkbox"> have a car</p>
 
         <input type="button" onclick="alert('Hello!')" value="Click Me!">
 
