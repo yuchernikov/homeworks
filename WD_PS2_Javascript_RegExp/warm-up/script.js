@@ -83,74 +83,46 @@ function countDateTime() {
   console.log("max "+maxYear+" "+maxMonth+" "+maxDay+" "+maxHour+" "+maxMinute);
   console.log("min "+minYear+" "+minMonth+" "+minDay+" "+minHour+" "+minMinute);
 
+  let minutes = maxMinute - minMinute;
+  let hours = maxHour - minHour;
+  let days = maxDay - minDay;
+  let monthes = maxMonth - minMonth;
   let years = maxYear - minYear;
 
-  let monthes = maxMonth - minMonth;
-  if (maxMonth < minMonth){
+  if (minutes < 0){
+    hours--;
+    minutes += 60;
+  }
+  if (hours < 0){
+    days--;
+    hours += 24;
+  }
+  if (days < 0){
+    monthes--;
+    days += daysAtPrevMonth(maxMonth, maxYear);
+  }
+  if (monthes < 0){
     years--;
     monthes += 12;
   }
 
-  let days = maxDay - minDay;
-  if (maxDay < minDay){
-    if(monthes === 0){
-      monthes = 11;
-      years--;
-    } else {
-      monthes--;
-    }
-    days += daysAtPrevMonth(maxMonth, maxYear);
-    // let prevMonth = maxMonth - 1;
-    // if (prevMonth === 2){
-    //   if (maxYear % 4 === 0){
-    //     days += 29;
-    //   } else{
-    //     days += 28;
-    //   }
-    // } else if (prevMonth === 4 || prevMonth === 6 || prevMonth === 9 ||
-    //   prevMonth === 11){
-    //     days += 30;
-    // } else{
-    //   days += 31;
-    // }
-  }
+  document.getElementById("resultDatetime").innerHTML =
+  "The resuit is: " + years + " years " + monthes + " monthes " + days +
+  " days " + hours + " hours " + minutes + " minutes ";
+}
 
-  let minutes = maxMinute - minMinute;
-  let hours = maxHour - minHour;
-
-  if (maxMinute < minMinute){
-    hours--;
-    minutes += 60;
-  }
-
-  if (maxHour < minHour){
-    if (days === 0) {
-      days += daysAtPrevMonth(maxMonth, maxYear) - 1;
-      monthes--;
-    } else {
-      days--;
-    }
-    hours += 24;
-  }
-
-
-    document.getElementById("resultDatetime").innerHTML =
-    "The resuit is: " + years + " years " + monthes + " monthes " + days +
-    " days " + hours + " hours " + minutes + " minutes ";
-  }
-
-  function daysAtPrevMonth(maxMonth, maxYear){
-    let prevMonth = maxMonth - 1;
-    if (prevMonth === 2){
-      if (maxYear % 4 === 0){
-        return 29;
-      } else{
-        return 28;
-      }
-    } else if (prevMonth === 4 || prevMonth === 6 || prevMonth === 9 ||
-      prevMonth === 11){
-        return 30;
+function daysAtPrevMonth(maxMonth, maxYear){
+  let prevMonth = maxMonth - 1;
+  if (prevMonth === 2){
+    if (maxYear % 4 === 0){
+      return 29;
     } else{
-      return 31;
+      return 28;
     }
+  } else if (prevMonth === 4 || prevMonth === 6 || prevMonth === 9 ||
+    prevMonth === 11){
+    return 30;
+  } else{
+    return 31;
   }
+}
